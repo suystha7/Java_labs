@@ -14,7 +14,6 @@ public class SingleChatClient {
             String rmsg, smsg;
 
             do {
-                // Receive and print server message
                 if (serverInput.hasNextLine()) {
                     rmsg = serverInput.nextLine();
                     System.out.println("\tServer: " + rmsg);
@@ -23,12 +22,11 @@ public class SingleChatClient {
                     break;
                 }
 
-                // Send a message to the server
                 System.out.print("Client: ");
                 smsg = userInput.nextLine();
                 clientOutput.println(smsg);
 
-            } while (!"buy".equalsIgnoreCase(rmsg)); // Exit on "buy"
+            } while (!"buy".equalsIgnoreCase(rmsg));
 
         } catch (IOException e) {
             System.err.println("Error connecting to server: " + e.getMessage());

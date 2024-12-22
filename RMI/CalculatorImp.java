@@ -3,10 +3,7 @@ package RMI;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-// Implementation of the Remote Interface
 public class CalculatorImp extends UnicastRemoteObject implements Calculator {
-
-    // Constructor
     protected CalculatorImp() throws RemoteException {
         super();
     }

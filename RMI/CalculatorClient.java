@@ -6,10 +6,7 @@ import java.util.Scanner;
 public class CalculatorClient {
     public static void main(String[] args) {
         try {
-            // Look up the remote object in the RMI registry
             Calculator calculator = (Calculator) Naming.lookup("rmi://localhost/CalculatorService");
-
-            // Perform calculations
             Scanner scanner = new Scanner(System.in);
             System.out.println("Calculator Operations: add, subtract, multiply, divide");
             System.out.print("Enter first number: ");
