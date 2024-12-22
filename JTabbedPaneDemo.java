@@ -1,5 +1,3 @@
-
-
 import java.awt.Color;
 import javax.swing.*;
 
@@ -15,11 +13,8 @@ public class JTabbedPaneDemo {
         f.setLayout(null);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // JTabbedPane
         jtp = new JTabbedPane();
         jtp.setBounds(50, 50, 410, 300);
-
-        // Add Tabs
         jtp.addTab("Hobbies", new HobbiesTab());
         jtp.addTab("Education", new EducationTab());
         jtp.addTab("Gender", new GenderTab());
@@ -40,8 +35,6 @@ class HobbiesTab extends JPanel {
 
     public HobbiesTab() {
         setLayout(null);
-
-        // Checkboxes
         ch1 = new JCheckBox("Gaming");
         ch2 = new JCheckBox("Swimming");
         ch3 = new JCheckBox("Riding");
@@ -57,12 +50,10 @@ class HobbiesTab extends JPanel {
         ch3.setBounds(100, 120, 100, 30);
         ch4.setBounds(100, 155, 100, 30);
 
-        // Label
         commentLabel = new JLabel("Comments:");
         commentLabel.setBounds(100, 190, 80, 30);
         add(commentLabel);
 
-        // TextArea with ScrollPane
         commentArea = new JTextArea();
         JScrollPane pane = new JScrollPane(commentArea);
         pane.setBounds(190, 190, 200, 60);
@@ -76,7 +67,6 @@ class EducationTab extends JPanel {
     public EducationTab() {
         setLayout(null);
 
-        // ComboBox
         String[] levels = { "Primary", "Secondary", "High School", "Bachelor", "Master", "PhD" };
         jcb = new JComboBox<>(levels);
 
@@ -98,7 +88,6 @@ class GenderTab extends JPanel {
     public GenderTab() {
         setLayout(null);
 
-        // Radio Buttons
         male = new JRadioButton("Male");
         female = new JRadioButton("Female");
         other = new JRadioButton("Other");

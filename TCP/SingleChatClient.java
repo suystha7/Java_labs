@@ -21,7 +21,6 @@ public class SingleChatClient {
                     System.out.println("Connection closed by server.");
                     break;
                 }
-
                 System.out.print("Client: ");
                 smsg = userInput.nextLine();
                 clientOutput.println(smsg);

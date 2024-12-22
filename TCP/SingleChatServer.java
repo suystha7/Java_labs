@@ -19,12 +19,9 @@ public class SingleChatServer {
                 String rmsg, smsg;
 
                 do {
-                    // Send a message to the client
                     System.out.print("Server: ");
                     smsg = userInput.nextLine();
                     serverOutput.println(smsg);
-
-                    // Receive and print client's message
                     if (clientInput.hasNextLine()) {
                         rmsg = clientInput.nextLine();
                         System.out.println("\tClient: " + rmsg);
@@ -33,7 +30,7 @@ public class SingleChatServer {
                         break;
                     }
 
-                } while (!"buy".equalsIgnoreCase(smsg)); // Exit on "buy"
+                } while (!"buy".equalsIgnoreCase(smsg));
 
             }
 

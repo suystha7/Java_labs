@@ -1,41 +1,38 @@
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class JTableExample {
     public static void main(String[] args) {
-        // Create a frame
         JFrame frame = new JFrame("JTable CRUD Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 400);
 
-        // Define column names and data
         String[] columnNames = {"ID", "Name", "Age"};
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         JTable table = new JTable(tableModel);
 
-        // Add some sample data
+        
         tableModel.addRow(new Object[]{1, "John Doe", 25});
         tableModel.addRow(new Object[]{2, "Jane Smith", 30});
         tableModel.addRow(new Object[]{3, "Sam Brown", 22});
 
-        // Create a panel for buttons and input fields
+        
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
 
-        // Input fields
+        
         JTextField idField = new JTextField(5);
         JTextField nameField = new JTextField(10);
         JTextField ageField = new JTextField(5);
 
-        // Buttons
+
         JButton addButton = new JButton("Add");
         JButton deleteButton = new JButton("Delete");
         JButton updateButton = new JButton("Update");
 
-        // Add components to the panel
         panel.add(new JLabel("ID:"));
         panel.add(idField);
         panel.add(new JLabel("Name:"));
@@ -45,8 +42,6 @@ public class JTableExample {
         panel.add(addButton);
         panel.add(deleteButton);
         panel.add(updateButton);
-
-        // Add ActionListener for Add Button
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -70,8 +65,6 @@ public class JTableExample {
                 }
             }
         });
-
-        // Add ActionListener for Delete Button
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -83,8 +76,6 @@ public class JTableExample {
                 }
             }
         });
-
-        // Add ActionListener for Update Button
         updateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -115,15 +106,9 @@ public class JTableExample {
                 }
             }
         });
-
-        // Add the table to a scroll pane
         JScrollPane scrollPane = new JScrollPane(table);
-
-        // Add components to the frame
         frame.add(scrollPane, BorderLayout.CENTER);
         frame.add(panel, BorderLayout.SOUTH);
-
-        // Make the frame visible
         frame.setVisible(true);
     }
 }

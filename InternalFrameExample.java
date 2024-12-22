@@ -21,10 +21,10 @@ public class InternalFrameExample {
                 frameCount++;
                 JInternalFrame internalFrame = new JInternalFrame(
                     "Frame " + frameCount,
-                    true,                  
-                    true,                 
-                    true,                
-                    true                  
+                    true,
+                    true,
+                    true,
+                    true
                 );
                 internalFrame.setSize(200, 150);
                 internalFrame.setVisible(true);
